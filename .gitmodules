@@ -1,0 +1,3 @@
+[submodule "src/shared"]
+	path = src/shared
+	url = git@github.com:Leo450/mstaff-submodules.git
