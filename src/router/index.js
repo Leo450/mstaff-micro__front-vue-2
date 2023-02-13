@@ -14,7 +14,7 @@ const routes = [
 
 const router = new VueRouter({
 	mode: 'history',
-	base: '/front-vue/',
+	base: '/front-vue-1/',
 	routes
 })
 

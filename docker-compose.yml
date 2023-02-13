@@ -1,8 +1,8 @@
 version: '3.1'
 
 services:
-  front-vue:
-    container_name: front-vue
+  dev:
+    container_name: front-vue-1
     build: docker/dev
     working_dir: /application
     ports:
