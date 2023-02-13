@@ -1,3 +1,3 @@
 [submodule "src/shared/ui"]
 	path = src/shared/ui
-	url = git@github.com:Leo450/mstaff-ui.git
+	url = git@github.com:Leo450/mstaff-micro__shared__ui.git
