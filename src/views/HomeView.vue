@@ -5,9 +5,17 @@
 
 		<b-container class="mt-5">
 			<b-row align-h="center">
-				<b-col cols="auto">
+				<b-col cols="auto" class="text-center">
 
-					<b-button variant="info">qzd</b-button>
+					<div id="cookie">
+						{{ cookie || 'No cookie' }}
+					</div>
+					<b-button variant="success" @click="setCookie">
+						Set Cookie
+					</b-button>
+					<b-button variant="success" class="ms-2" @click="unsetCookie">
+						Unset Cookie
+					</b-button>
 
 				</b-col>
 			</b-row>
@@ -21,6 +29,36 @@
 
 	export default {
 		name: 'HomeView',
-		components: { Header }
+		components: { Header },
+		methods: {
+			getCookie()
+			{
+				return this.$cookies.get('token')
+			},
+			setCookie()
+			{
+				this.$cookies.set('token', 'abc123')
+				this.updateCookie()
+			},
+			unsetCookie()
+			{
+				this.$cookies.remove('token')
+				this.updateCookie()
+			},
+			updateCookie()
+			{
+				this.cookie = this.getCookie()
+			}
+		},
+		data()
+		{
+			return {
+				cookie: null
+			}
+		},
+		beforeMount()
+		{
+			this.updateCookie()
+		}
 	}
 </script>

@@ -9,6 +9,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
+// Cookies
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
+
 Vue.config.productionTip = false
 
 new Vue({

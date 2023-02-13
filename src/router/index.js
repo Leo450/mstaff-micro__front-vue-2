@@ -5,17 +5,23 @@ import HomeView from '../views/HomeView.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  }
+	{
+		path: '/',
+		name: 'home',
+		component: HomeView
+	}
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: '/front-vue/',
-  routes
+	mode: 'history',
+	base: '/front-vue/',
+	routes
+})
+
+router.beforeEach((to, from, next) => {
+	const token = Vue.$cookies.get('token')
+	if (!token) window.location.replace('/front-symfo')
+	next()
 })
 
 export default router
