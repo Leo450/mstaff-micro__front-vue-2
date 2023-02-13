@@ -14,13 +14,13 @@ const routes = [
 
 const router = new VueRouter({
 	mode: 'history',
-	base: '/front-vue-1/',
+	base: '/front-vue-2/',
 	routes
 })
 
 router.beforeEach((to, from, next) => {
 	const token = Vue.$cookies.get('token')
-	if (!token) window.location.replace('/front-symfo')
+	if (!token) window.location.replace('/front-symfo-1')
 	next()
 })
 
