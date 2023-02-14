@@ -1,4 +1,4 @@
 #!/bin/bash
 #rm -R node_modules
-#npm ci
+npm ci
 npm run serve
