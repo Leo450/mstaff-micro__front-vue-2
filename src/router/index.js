@@ -20,7 +20,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
 	const token = Vue.$cookies.get('token')
-	if (!token) window.location.replace('/front-symfo-1')
+	if (!token) window.location.replace('/front-symfo-2')
 	next()
 })
 
