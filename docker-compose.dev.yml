@@ -1,8 +1,8 @@
 version: '3.1'
 
 services:
-  vue:
-    container_name: mstaff-micro__front-vue-2__dev__vue
+  node:
+    container_name: mstaff-micro__front-vue-2__dev__node
     build: docker/dev
     working_dir: /application
     ports:
