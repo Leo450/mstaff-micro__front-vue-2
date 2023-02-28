@@ -1,4 +1,4 @@
 [submodule "src/shared/ui"]
 	path = src/shared/ui
-	url = git@github.com:Leo450/mstaff-micro__shared__ui.git
+	url = git@github.com:hublo/mstaff-poc-micro__shared__ui.git
 	branch = main
